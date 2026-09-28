@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<title>틈 · 나의 메모</title>
+<style>
+:root{color-scheme:light;--ink:#243c36;--muted:#66766f;--line:#dbe3dc;--green:#315c48;--paper:#fffefa}*{box-sizing:border-box}body{margin:0;background:#f3f5ef;color:var(--ink);font:15px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer}button,input,textarea,select{border:1px solid var(--line);border-radius:10px}button{min-height:42px;padding:8px 15px;background:var(--paper);color:var(--ink)}button:hover{background:#e9efe6}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #8cad78;outline-offset:3px}button:disabled{opacity:.5;cursor:not-allowed}[hidden]{display:none!important}.wrap{max-width:1240px;margin:auto;padding:38px 40px 24px}header{display:flex;justify-content:space-between;gap:16px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:24px}.brand{display:flex;align-items:center;gap:13px}.mark{background:var(--green);color:#fff;border-radius:14px;width:46px;height:46px;display:grid;place-items:center;font-size:25px}h1{font-size:25px;letter-spacing:-1px;margin:0}header p{margin:0;color:var(--muted);font-size:13px}.local{font-size:12px;color:var(--green);white-space:nowrap}.local:before{content:'●';margin-right:7px;color:#719360}.intro{margin:28px 0}.eyebrow{font-size:11px;letter-spacing:2px;color:var(--muted)}h2{font-size:26px;letter-spacing:-1px;margin:7px 0}.intro p{margin:0;color:var(--muted)}.layout{display:grid;grid-template-columns:330px minmax(0,1fr);gap:30px;align-items:start}.editor{background:var(--paper);border:1px solid var(--line);border-radius:17px;padding:24px;position:sticky;top:20px;box-shadow:0 5px 20px #2a493305}.editor h3{margin:0;font-size:18px}.editor .sub{font-size:12px;color:var(--muted);margin:5px 0 22px}label{display:block;font-size:13px;font-weight:600;margin-bottom:7px}input,textarea,select{background:#fffefa;color:var(--ink);padding:11px 12px;max-width:100%;width:100%}textarea{resize:vertical;min-height:190px;line-height:1.7}.field{margin-bottom:18px}.primary{background:var(--green);border-color:var(--green);color:white}.primary:hover{background:#254936}.form-actions{display:flex;gap:8px}.form-actions .primary{flex:1}.hint{color:var(--muted);font-size:11px;margin:15px 0 0}.toolbar{display:flex;gap:12px;margin-bottom:16px}.search{flex:1;min-width:0}.toolbar select{width:148px;font-size:13px}.filters{display:flex;gap:7px;flex-wrap:wrap}.filters button{border-color:transparent;background:transparent;font-size:13px;padding:6px 13px;min-height:36px}.filters button[aria-pressed=true]{background:var(--green);color:white}.list-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:19px}.count{font-size:12px;color:var(--muted);white-space:nowrap}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px;min-width:0;display:flex;flex-direction:column}.card.editing{border-color:var(--green);box-shadow:0 0 0 1px var(--green)}.badge{align-self:flex-start;border-radius:6px;padding:3px 8px;font-size:11px;background:#e8eedf;color:#526538}.badge.work{background:#e5edf4;color:#486078}.badge.daily{background:#f4e8df;color:#916340}.card h3{font-size:17px;margin:13px 0 6px;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.preview{white-space:pre-wrap;overflow-wrap:anywhere;color:#607068;font-size:14px;margin:0 0 20px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.card-bottom{margin-top:auto;border-top:1px solid #edf0e9;padding-top:13px}.dates{font-size:10px;color:var(--muted)}time{display:block}.card-actions{display:flex;justify-content:flex-end;gap:5px;margin-top:8px}.card-actions button{border:0;background:transparent;font-size:12px;min-height:36px;padding:6px 9px}.card-actions button:hover{background:#edf0e8}.danger{color:#a34437}.confirm{padding-top:10px}.confirm p{font-size:12px;color:#a34437;margin:0 0 8px}.confirm button{font-size:12px;padding:6px 10px}.confirm .danger{background:#a34437;color:white;border-color:#a34437}.empty{grid-column:1/-1;text-align:center;border:1px dashed #cbd6c9;border-radius:16px;padding:70px 20px;color:var(--muted)}.empty .icon{font-size:30px;color:#839d79}.empty h3{color:var(--ink);font-size:18px;margin:12px 0 6px}.empty p{font-size:13px;margin:0}.notice{font-size:13px;color:var(--green);min-height:25px;margin:15px 0}.error{background:#fff0e9;color:#963e2e;border-radius:10px;padding:12px;margin:16px 0;overflow-wrap:anywhere}footer{color:var(--muted);font-size:11px;border-top:1px solid var(--line);margin-top:35px;padding-top:17px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(max-width:960px){.wrap{padding:25px}.layout{grid-template-columns:290px minmax(0,1fr);gap:20px}.cards{grid-template-columns:1fr}}@media(max-width:680px){.wrap{padding:22px 18px}header{align-items:flex-start}.brand{gap:9px}header p{font-size:11px}.local{font-size:10px;margin-top:9px}.layout{grid-template-columns:1fr}.editor{position:static;padding:20px}h2{font-size:23px}.intro{margin:23px 0}.intro p{font-size:13px}textarea{min-height:140px}.toolbar{margin-top:8px;gap:8px}.toolbar select{width:133px}.filters{gap:2px}.filters button{padding:6px 10px}.list-heading{gap:4px}.empty{padding:45px 15px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><div class="brand"><span class="mark" aria-hidden="true">틈</span><div><h1>나의 메모</h1><p>생각이 머무는 작은 공간</p></div></div><span class="local">이 브라우저에 보관</span></header>
+<section class="intro"><span class="eyebrow">A LITTLE SPACE FOR YOUR THOUGHTS</span><h2>지나가는 생각을 붙잡아 두세요.</h2><p>작은 아이디어부터 오늘의 할 일까지, 가볍게 기록하세요.</p></section>
+<div id="error" class="error" role="alert" hidden></div>
+<main class="layout">
+<section class="editor" aria-labelledby="editor-title"><h3 id="editor-title">새 메모</h3><p class="sub">지금 떠오른 생각은 무엇인가요?</p>
+<form id="memo-form"><div class="field"><label for="title">제목</label><input id="title" placeholder="메모의 제목을 적어주세요" required></div><div class="field"><label for="body">본문</label><textarea id="body" placeholder="잊고 싶지 않은 내용을 자유롭게…" required></textarea></div><div class="field"><label for="tag">태그</label><select id="tag"><option>아이디어</option><option>업무</option><option>일상</option></select></div><div class="form-actions"><button id="submit" class="primary" type="submit">＋ 메모 저장</button><button id="cancel-edit" type="button" hidden>수정 취소</button></div><p class="hint">Ctrl / ⌘ + Enter로 빠르게 저장할 수 있어요.</p></form>
+</section>
+<section aria-label="저장한 메모"><div class="toolbar"><div class="search"><label for="search" class="sr-only">제목과 본문 검색</label><input id="search" type="search" placeholder="제목이나 본문 검색"></div><div><label for="sort" class="sr-only">메모 정렬</label><select id="sort"><option value="created-desc">최근 작성순</option><option value="updated-desc">최근 수정순</option><option value="created-asc">오래된 작성순</option></select></div></div><div class="list-heading"><nav class="filters" aria-label="태그 필터"><button type="button" data-tag="전체" aria-pressed="true">전체</button><button type="button" data-tag="아이디어" aria-pressed="false">아이디어</button><button type="button" data-tag="업무" aria-pressed="false">업무</button><button type="button" data-tag="일상" aria-pressed="false">일상</button></nav><span id="count" class="count" aria-live="polite"></span></div><div id="cards" class="cards"></div><p id="status" class="notice" role="status" aria-live="polite"></p></section>
+</main><footer>메모는 외부로 전송되지 않고 이 브라우저의 localStorage에 저장됩니다. 같은 브라우저에서 같은 파일을 열어주세요. 브라우저 데이터 삭제·시크릿 모드 종료 시에는 보존되지 않습니다.</footer>
+</div>
+<script>
+'use strict';
+// 1. 데이터 모델 및 상태: Memo = { id, title, body, tag, createdAt, updatedAt }
+const STORAGE_KEY='teum.memos.v1';
+const TAGS=['아이디어','업무','일상'];
+const state={memos:[],tag:'전체',query:'',sort:'created-desc',editingId:null,deleteId:null,storageBlocked:false};
+const $=id=>document.getElementById(id);
+const ui={form:$('memo-form'),title:$('title'),body:$('body'),tag:$('tag'),cards:$('cards'),error:$('error'),status:$('status')};
+function showError(message){ui.error.textContent=message;ui.error.hidden=false;}
+function announce(message){ui.status.textContent=message;}
+function validMemos(data){
+ return Array.isArray(data)&&data.every(m=>m&&typeof m.id==='string'&&m.id.length>0&&typeof m.title==='string'&&typeof m.body==='string'&&TAGS.includes(m.tag)&&typeof m.createdAt==='string'&&Number.isFinite(Date.parse(m.createdAt))&&typeof m.updatedAt==='string'&&Number.isFinite(Date.parse(m.updatedAt)))&&new Set(data.map(m=>m.id)).size===data.length;
+}
+// 2. localStorage 입출력. 저장 성공 후에만 메모 상태와 화면을 갱신한다.
+function loadMemos(){
+ try{const raw=localStorage.getItem(STORAGE_KEY);const data=raw===null?[]:JSON.parse(raw);if(!validMemos(data))throw new Error('invalid data');state.storageBlocked=false;return data;}
+ catch(e){state.storageBlocked=true;showError('저장된 메모를 읽을 수 없습니다. 기존 데이터 보호를 위해 저장·삭제를 중지했습니다. 브라우저의 저장소 접근 설정을 확인한 뒤 다시 열어주세요.');return null;}
+}
+function saveMemos(next){
+ if(state.storageBlocked)return false;
+ try{localStorage.setItem(STORAGE_KEY,JSON.stringify(next));state.memos=next;ui.error.hidden=true;return true;}
+ catch(e){showError('저장하지 못했습니다. 저장 공간 또는 브라우저 설정을 확인하세요. 입력 내용과 기존 메모는 그대로 유지됩니다.');return false;}
+}
+// 각 변경 직전 최신 저장값을 읽어 다른 탭에서 저장한 메모를 보존한다.
+function refreshStored(){const data=loadMemos();if(data===null)return false;state.memos=data;return true;}
+function newId(){return globalThis.crypto&&typeof crypto.randomUUID==='function'?crypto.randomUUID():Date.now().toString(36)+'-'+Math.random().toString(36).slice(2);}
+function resetEditor(){state.editingId=null;ui.form.reset();$('editor-title').textContent='새 메모';$('submit').textContent='＋ 메모 저장';$('cancel-edit').hidden=true;}
+// 3. CRUD
+ui.form.addEventListener('submit',event=>{
+ event.preventDefault();
+ if(!ui.title.value.trim()){ui.title.setCustomValidity('제목을 입력해주세요.');ui.title.reportValidity();return;}
+ if(!ui.body.value.trim()){ui.body.setCustomValidity('본문을 입력해주세요.');ui.body.reportValidity();return;}
+ if(!refreshStored())return;
+ const now=new Date().toISOString();const edit=state.editingId;let next;
+ if(edit){const original=state.memos.find(m=>m.id===edit);if(!original){showError('이 메모가 다른 탭에서 삭제되었습니다. 입력 내용을 복사한 뒤 수정 취소를 누르고 새 메모로 저장해주세요.');return;}
+ next=state.memos.map(m=>m.id===edit?{...m,title:ui.title.value,body:ui.body.value,tag:ui.tag.value,updatedAt:new Date(Math.max(Date.now(),Date.parse(m.updatedAt)+1)).toISOString()}:m);
+ }else{let id=newId();while(state.memos.some(m=>m.id===id))id=newId();next=[...state.memos,{id,title:ui.title.value,body:ui.body.value,tag:ui.tag.value,createdAt:now,updatedAt:now}];}
+ if(saveMemos(next)){resetEditor();render();announce(edit?'수정한 메모를 저장했습니다.':'메모를 저장했습니다. 현재 검색·태그 조건에 따라 목록에 보이지 않을 수 있습니다.');ui.title.focus();}
+});
+[ui.title,ui.body].forEach(input=>input.addEventListener('input',()=>input.setCustomValidity('')));
+ui.form.addEventListener('keydown',event=>{if((event.ctrlKey||event.metaKey)&&event.key==='Enter'){event.preventDefault();ui.form.requestSubmit();}});
+$('cancel-edit').addEventListener('click',()=>{resetEditor();render();ui.title.focus();});
+function editMemo(id){const memo=state.memos.find(m=>m.id===id);if(!memo)return;state.editingId=id;state.deleteId=null;ui.title.value=memo.title;ui.body.value=memo.body;ui.tag.value=memo.tag;ui.title.setCustomValidity('');ui.body.setCustomValidity('');$('editor-title').textContent='메모 수정';$('submit').textContent='수정 내용 저장';$('cancel-edit').hidden=false;render();ui.title.focus();ui.form.scrollIntoView({block:'nearest'});}
+function deleteMemo(id){if(!refreshStored())return;if(saveMemos(state.memos.filter(m=>m.id!==id))){if(state.editingId===id)resetEditor();state.deleteId=null;render();announce('메모를 삭제했습니다.');$('search').focus();}}
+// 4. 태그·검색·정렬을 동시에 적용하는 단일 로직
+function getVisibleMemos(){const query=state.query.trim().toLocaleLowerCase();return state.memos.filter(m=>(state.tag==='전체'||m.tag===state.tag)&&(!query||m.title.toLocaleLowerCase().includes(query)||m.body.toLocaleLowerCase().includes(query))).sort((a,b)=>{if(state.sort==='created-asc')return Date.parse(a.createdAt)-Date.parse(b.createdAt);if(state.sort==='updated-desc')return Date.parse(b.updatedAt)-Date.parse(a.updatedAt)||Date.parse(b.createdAt)-Date.parse(a.createdAt);return Date.parse(b.createdAt)-Date.parse(a.createdAt);});}
+$('search').addEventListener('input',event=>{state.query=event.target.value;state.deleteId=null;render();});
+$('sort').addEventListener('change',event=>{state.sort=event.target.value;render();});
+document.querySelectorAll('[data-tag]').forEach(button=>button.addEventListener('click',()=>{state.tag=button.dataset.tag;state.deleteId=null;render();}));
+// 5. 사용자 문자열은 항상 textContent/value로만 처리. 한 번의 DOM 교체로 목록 갱신.
+function el(tag,className,text){const node=document.createElement(tag);if(className)node.className=className;if(text!==undefined)node.textContent=text;return node;}
+function action(text,fn,className=''){const button=el('button',className,text);button.type='button';button.addEventListener('click',fn);return button;}
+const formatter=new Intl.DateTimeFormat('ko-KR',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});
+function render(){
+ const visible=getVisibleMemos();$('count').textContent=visible.length+' / '+state.memos.length+'개';
+ document.querySelectorAll('[data-tag]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.tag===state.tag)));
+ const fragment=document.createDocumentFragment();
+ if(!visible.length){const empty=el('div','empty');const filtered=state.query.trim()!==''||state.tag!=='전체';empty.append(el('div','icon','✎'),el('h3','',filtered?'검색 결과 없음':'아직 메모가 없어요'),el('p','',filtered?'검색어나 태그를 바꾸어 다시 찾아보세요.':'첫 번째 생각을 새 메모에 적어보세요.'));fragment.append(empty);}
+ for(const memo of visible){const card=el('article','card'+(memo.id===state.editingId?' editing':''));card.dataset.id=memo.id;const badge=el('span','badge'+(memo.tag==='업무'?' work':memo.tag==='일상'?' daily':''),memo.tag);const title=el('h3','',memo.title);const preview=el('p','preview',memo.body);const bottom=el('div','card-bottom');const dates=el('div','dates');for(const [label,value] of [['작성',memo.createdAt],['수정',memo.updatedAt]]){const time=el('time','',label+' '+formatter.format(new Date(value)));time.dateTime=value;dates.append(time);}bottom.append(dates);
+ if(state.deleteId===memo.id){const confirm=el('div','confirm');confirm.append(el('p','','이 메모를 삭제할까요? 되돌릴 수 없습니다.'),action('삭제 확인',()=>deleteMemo(memo.id),'danger'),document.createTextNode(' '),action('취소',()=>{state.deleteId=null;render();focusCardButton(memo.id,'삭제');}));bottom.append(confirm);}
+ else{const actions=el('div','card-actions');actions.append(action('열기 · 수정',()=>editMemo(memo.id)),action('삭제',()=>{state.deleteId=memo.id;render();focusCardButton(memo.id,'삭제 확인');},'danger'));bottom.append(actions);}
+ card.append(badge,title,preview,bottom);fragment.append(card);
+ }
+ ui.cards.replaceChildren(fragment);$('submit').disabled=state.storageBlocked;
+}
+function focusCardButton(id,label){const card=Array.from(ui.cards.children).find(c=>c.dataset.id===id);if(card){const button=Array.from(card.querySelectorAll('button')).find(b=>b.textContent===label);if(button)button.focus();}}
+window.addEventListener('storage',event=>{if(event.key===STORAGE_KEY||event.key===null){const data=loadMemos();if(data!==null){state.memos=data;state.deleteId=null;ui.error.hidden=true;render();announce('다른 탭의 변경 내용을 반영했습니다.');}}});
+window.addEventListener('beforeunload',event=>{const original=state.memos.find(m=>m.id===state.editingId);const dirty=original?(ui.title.value!==original.title||ui.body.value!==original.body||ui.tag.value!==original.tag):(ui.title.value!==''||ui.body.value!=='');if(dirty){event.preventDefault();event.returnValue='';}});
+state.memos=loadMemos()||[];render();
+</script>
+</body>
+</html>
